@@ -7,8 +7,34 @@ There is a well known PHP's Framework For WEB Artisans out there in the internet
 
 	Components: Ubuntu/trusty64, Apache2, PHP 7 (and some required PHP extensions) and Laravel 5.x
 
-2. DB server 
+2. DB server
 
 	Host name: DB1
 
 	Components: Ubuntu/trusty64, mySQL
+
+
+	Directory structure
+
+	<myVIB>
+	|
+	--------createUser.sql
+	|
+	--------Vagrantfile
+	|
+	--------README.md
+	|
+	--------<cookbooks>
+	                  |
+	                  --<app>--
+	                  |       |
+	                  |       --<recipes>
+	                  |                  |
+	                  |                  ----default.rb
+	                  --<db>--
+	                          |
+	                          --<recipes>
+	                                    |
+	                                    ----default.rb
+
+	Note that I am using chef_solo to do the configure management.
