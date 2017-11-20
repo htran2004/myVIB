@@ -1,4 +1,5 @@
 # Update the repositories and Download/install the necessary prerequisites
+execute "sudo apt-add-repository ppa:ondrej/php -y"
 execute "sudo apt-get update"
 ['apache2', 'php', 'php-mbstring', 'php-zip', 'phpunit', 'unzip', 'libapache2-mod-php'].each do |p|
   package p do
