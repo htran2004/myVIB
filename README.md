@@ -18,7 +18,7 @@ For the purpose of this demos we are going to use Vagrant to deploy an LAMP (Lin
 
 
 	Directory structure
-
+<b>
 	<myVIB>
 	|
 	--------createUser.sql
@@ -30,7 +30,7 @@ For the purpose of this demos we are going to use Vagrant to deploy an LAMP (Lin
 	--------<cookbooks>----<app>----<recipes>---default.rb
 	                  |
 										-----<db>----<recipes>---default.rb
-
+</b>
 
 	Note that I am using chef_solo to do the configure management and Laravel composer installer to install/configure Laravel.
 
