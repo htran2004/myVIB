@@ -39,7 +39,9 @@ execute "sed -i '/mysql/{n;n;n;n;s/'\\''DB_HOST'\\'', '\\''.*'\\''/'\\''DB_HOST'
 execute "sed -i '/mysql/{n;n;n;n;s/'\\''DB_DATABASE'\\'', '\\''.*'\\''/'\\''DB_DATABASE'\\'', '\\''myproject'\\''/g}' /var/www/myProject/config/database.php"
 execute "sed -i '/mysql/{n;n;n;n;n;s/'\\''DB_USERNAME'\\'', '\\''.*'\\''/'\\''DB_USERNAME'\\'', '\\''myproject'\\''/g}' /var/www/myProject/config/database.php"
 execute "sed -i '/mysql/{n;n;n;n;n;n;s/'\\''DB_PASSWORD'\\'', '\\''.*'\\''/'\\''DB_PASSWORD'\\'', '\\''mypassword'\\''/g}' /var/www/myProject/config/database.php"
-# enable apache2 service and restart apache2 to reload the new configuration
+# Disable php5 modules.
+execute "sudo a2dismod php5"
+# Enable apache2 service and restart apache2 to reload the new configuration
 service 'apache2' do
   supports :status => true, :restart => true, :reload => true
   action [ :enable, :restart]
