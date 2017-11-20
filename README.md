@@ -27,17 +27,11 @@ For the purpose of this demos we are going to use Vagrant to deploy an LAMP (Lin
 	|
 	--------README.md
 	|
-	--------<cookbooks>
+	--------<cookbooks>----<app>----<recipes>---default.rb
 	                  |
-	                  --<app>--
-	                  |       |
-	                  |       --<recipes>
-	                  |                  |
-	                  |                  ----default.rb
-	                  --<db>--
-	                          |
-	                          --<recipes>
-	                                    |
-	                                    ----default.rb
+										-----<db>----<recipes>---default.rb
+
 
 	Note that I am using chef_solo to do the configure management and Laravel composer installer to install/configure Laravel.
+
+	To access the front pages: http://192.168.33.20
