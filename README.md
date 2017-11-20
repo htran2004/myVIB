@@ -1,5 +1,8 @@
 # myVIB Monday, 20 November 2017
-There is a well known PHP's Framework For WEB Artisans out there in the internet called Laravel 5.x. It's already have it's own prebuilt Vagrant box that contains the application with all the prerequisites called Laravel Homestead. For the purpose of this demos we are going to use Vagrant to deploy an LAMP (Linux, Apache, MySqL, and PHP) along with Laravel 5.x PHP Framework. I will spin-up two Vagrant boxes as the following;
+There is a well known PHP's Framework For WEB Artisans out there in the internet called Laravel 5.x. It's already have it's own prebuilt Vagrant box that contains the application with all the prerequisites called Laravel Homestead (https://app.vagrantup.com/laravel/boxes/homestead)
+
+
+For the purpose of this demos we are going to use Vagrant to deploy an LAMP (Linux, Apache, MySqL, and PHP) along with Laravel 5.x PHP Framework. I will spin-up two Vagrant boxes as the following;
 
 1. Web/App server
 
@@ -37,4 +40,4 @@ There is a well known PHP's Framework For WEB Artisans out there in the internet
 	                                    |
 	                                    ----default.rb
 
-	Note that I am using chef_solo to do the configure management.
+	Note that I am using chef_solo to do the configure management and Laravel composer installer to install/configure Laravel.
